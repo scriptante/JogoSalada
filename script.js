@@ -16,14 +16,14 @@ for (const fruta of imgFrutas) {
   fruta.addEventListener("click", () => {
     const novaFruta = fruta.cloneNode(true);
     montarFrutaNoJogo(novaFruta);
-    if (contFrutasId == 1) {
+    if (contFrutasId >= 1) {
       btVerificar.classList.remove("d-none");
     }
   });
 }
 
 function montarReceita(nomeFruta) {
-  const quantidade = Math.floor(Math.random() * 5) + 1;
+  const quantidade = Math.floor(Math.random() * 3) + 1;
   const texto = `: ${nomeFruta}: ${quantidade} :`;
   receita.push({ nome: nomeFruta, quantidade });
   listFrutasQuant.append(texto);
